@@ -83,7 +83,7 @@ fun NewsItem(
     publishAt: String,
     onItemClick: () -> Unit,
 ) {
-    ConstraintLayout(modifier = Modifier.clickable { onItemClick }) {
+    ConstraintLayout(modifier = Modifier.clickable { onItemClick() }) {
         val (posterImage, titleText, publishedDateText) = createRefs()
 
         AsyncImage(
